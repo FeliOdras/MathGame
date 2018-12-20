@@ -22,11 +22,6 @@ let summe;
        }
 
 
-function lessonOutput() {
-    
-}
-
-
 // if (summe < 20) {
 //     lessonOutput();
 // } else {
