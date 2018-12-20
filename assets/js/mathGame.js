@@ -4,23 +4,23 @@ let b;
 let summe;
 
 function createAdditionLesson() {
-  
-  do {
 
-    // Create random integer for Variables
-    a = Math.floor(Math.random() * 21);
-    b = Math.floor(Math.random() * 21);
+    do {
 
-    // Define 'summe'
-    summe = a + b;
+        // Create random integer for Variables
+        a = Math.floor(Math.random() * 21);
+        b = Math.floor(Math.random() * 21);
 
-    //console.log(a);
-    //console.log(b);
-    console.log(summe);
+        // Define 'summe'
+        summe = a + b;
+
+        //console.log(a);
+        //console.log(b);
+        //console.log(summe);
     }
-while (summe > 20);
+    while (summe > 20);
 
-  window.document.write(a + ' + ' + b + ' = <input type="number">');
+    window.document.write(a + ' + ' + b + ' = <input type="number">');
 }
 
 createAdditionLesson()
