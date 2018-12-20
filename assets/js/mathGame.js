@@ -23,6 +23,8 @@ function createAddtionLesson() {
 
 }
 
+createAddtionLesson()
+
 // if (summe < 20) {
 //     lessonOutput();
 // } else {
