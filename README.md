@@ -6,5 +6,5 @@ Output language is German, but can easily be changed.
 **This game**
 - prompts a randomly generated math addition or substraction exercise with numbers between 0 and 20
 - no exercises with results greater than 20 or less than 0 
-- feedback to user if the result is correct or not
+- gives feedback to user if the result is correct or not
 
