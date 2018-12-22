@@ -1,4 +1,4 @@
-// Task: Create a math game for Addition with the following requirements:
+// Task: Create a math game for addition and substraction with the following requirements:
 // - randomly created addition and substraction exercises
 // - only numbers from 1 - 20 are calculated
 // - also the result must not be greater than 20 and not less 0
