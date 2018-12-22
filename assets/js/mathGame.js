@@ -41,10 +41,11 @@ function createExercise() {
     // Repeat until sum or difference of variables is not greater than 20 and not less than 0
     while (exerciseResult > 20 || exerciseResult < 0);
 
-    // Build lesson to solve
+
     // Create lesson output (Prompt for now)
     exerciseInput = prompt("Löse diese Aufgabe: " + exerciseOutput);
-    // Compare if the input result is correct
+
+    // Compare if the input result is correct or not and put out corresponding feedback
     if (exerciseInput == exerciseResult) {
         alert("Super! Du hast die Aufgabe richtig gelöst :)");
     } else {
@@ -52,4 +53,4 @@ function createExercise() {
     }
 }
 
-createExercise()
+createExercise();
