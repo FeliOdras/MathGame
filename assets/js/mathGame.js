@@ -20,7 +20,7 @@ function createAdditionLesson() {
     }
     while (summe > 20);
 
-    window.document.write(a + ' + ' + b + ' = <input type="number">');
+    let lessonOutput = a + ' + ' + b + ' = <input type="number">';
 }
 
 createAdditionLesson()
