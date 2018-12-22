@@ -3,38 +3,52 @@
 // - also the result must not be greater than 20
 // - create feedback wether the input result is correct or not
 
-// Declare variables
-let a;
-let b;
-let summe;
-let lessonOutput;
-let lessonInput;
+function createExercise() {
+    // Declare variables
+    let a;
+    let b;
+    let exerciseOutput;
+    let exerciseInput;
+    let exerciseOperator;
+    let exerciseResult;
 
-function createAdditionLesson() {
-
+    // Select operator (+ or -)
+    // debugger
     do {
+    a = Math.floor(Math.random() * 21);
+    b = Math.floor(Math.random() * 21);
+    exerciseOperator = Math.floor(Math.random() * 2);
 
-        // Create random integer for Variables
-        a = Math.floor(Math.random() * 21);
-        b = Math.floor(Math.random() * 21);
+    if (exerciseOperator == 0) {
+        exerciseOperator = '-';
+    } else if (exerciseOperator == 1) {
+        exerciseOperator = '+';
+    }
 
-        // Define 'summe'
-        summe = a + b;
+    if (exerciseOperator == '-') {
+        exerciseResult = a - b;
+    } else if (exerciseOperator == '+') {
+        exerciseResult = a + b;
+    }
+
+    exerciseOutput = a + exerciseOperator + b;
+    console.log(a + exerciseOperator + b)
+    console.log(exerciseResult)
+    console.log(exerciseOutput)
 
     }
     // Repeat until sum of variables is not greater than 20
-    while (summe > 20);
+    while (exerciseResult > 20 || exerciseResult < 0);
 
     // Build lesson to solve
-    lessonOutput = a + ' + ' + b + ' = ';
     // Create lesson output (Prompt for now)
-    lessonInput = prompt("Löse diese Aufgabe: " + lessonOutput);
+    exerciseInput = prompt("Löse diese Aufgabe: " + exerciseOutput);
     // Compare if the input result is correct
-    if (lessonInput == summe) {
+    if (exerciseInput == exerciseResult) {
         alert("Super! Du hast die Aufgabe richtig gelöst :)");
     } else {
         alert("Das war leider falsch :(");
     }
 }
 
-createAdditionLesson()
+createExercise()
