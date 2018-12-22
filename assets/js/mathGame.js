@@ -28,8 +28,7 @@ function createAdditionLesson() {
     // Build lesson to solve
     lessonOutput = a + ' + ' + b + ' = ';
     // Create lesson output (Prompt for now)
-    lessonInput = prompt(lessonOutput);
-
+    lessonInput = prompt("Löse diese Aufgabe: " + lessonOutput);
     // Compare if the input result is correct
     if (lessonInput == summe) {
         alert("Super! Du hast die Aufgabe richtig gelöst :)");
