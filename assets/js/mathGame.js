@@ -1,3 +1,8 @@
+// Task: Create a math game for Addition with the following requirements:
+// - only numbers from 1 - 20 are calculated
+// - also the result must not be greater than 20
+// - create feedback wether the input result is correct or not
+
 // Declare variables
 let a;
 let b;
@@ -16,16 +21,16 @@ function createAdditionLesson() {
         // Define 'summe'
         summe = a + b;
 
-        //console.log(a);
-        //console.log(b);
-        console.log(summe);
     }
+    // Repeat until sum of variables is not greater than 20
     while (summe > 20);
 
+    // Build lesson to solve
     lessonOutput = a + ' + ' + b + ' = ';
-    //console.log (lessonOutput);
+    // Create lesson output (Prompt for now)
     lessonInput = prompt(lessonOutput);
 
+    // Compare if the input result is correct
     if (lessonInput == summe) {
         alert("Super! Du hast die Aufgabe richtig gelöst :)");
     } else {
