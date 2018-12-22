@@ -2,6 +2,7 @@
 let a;
 let b;
 let summe;
+let lessonOutput;
 
 function createAdditionLesson() {
 
@@ -16,11 +17,12 @@ function createAdditionLesson() {
 
         //console.log(a);
         //console.log(b);
-        //console.log(summe);
+        console.log(summe);
     }
     while (summe > 20);
 
-    let lessonOutput = a + ' + ' + b + ' = <input type="number">';
+    lessonOutput = a + ' + ' + b + ' = <input type="number">';
+    console.log (lessonOutput);
 }
 
 createAdditionLesson()
