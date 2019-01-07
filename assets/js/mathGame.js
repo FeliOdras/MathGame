@@ -8,8 +8,8 @@
 
 function createExercise() {
     // Declare variables
-    let a; // First number of exercise
-    let b; // Second number of exercise
+    let firstOperand; // First number of exercise
+    let secondOperand; // Second number of exercise
     let exerciseOperator; // Mathematical operator + or -
     let exerciseOutput; // Exercise to solve
     let exerciseInput; // Solition. Inputr by user
@@ -17,8 +17,8 @@ function createExercise() {
 
     do {
         // Select random values for exercise variables a and b
-        a = Math.floor(Math.random() * 21);
-        b = Math.floor(Math.random() * 21);
+        firstOperand = Math.floor(Math.random() * 21);
+        secondOperand = Math.floor(Math.random() * 21);
         // Select operator randomly  
         exerciseOperator = Math.floor(Math.random() * 2);
 
@@ -31,16 +31,16 @@ function createExercise() {
 
         // Calculate Result of exercise
         if (exerciseOperator == '-') {
-            exerciseResult = a - b;
+            exerciseResult = firstOperand - secondOperand;
         } else if (exerciseOperator == '+') {
-            exerciseResult = a + b;
+            exerciseResult = firstOperand + secondOperand;
         }
     }
     // Repeat until sum or difference of variables is not greater than 20 and not less than 0
     while (exerciseResult > 20 || exerciseResult < 0);
 
 
-    exerciseOutput = a + ' ' + exerciseOperator + ' ' + b;
+    exerciseOutput = firstOperand + ' ' + exerciseOperator + ' ' + secondOperand;
     // console.log(exerciseOutput)
     // console.log(exerciseResult)
 
