@@ -12,11 +12,10 @@ function createExercise() {
     let secondOperand; // Second number of exercise
     let exerciseOperator; // Mathematical operator + or -
     let exerciseOutput; // Exercise to solve
-    let exerciseInput; // Solition. Inputr by user
+    let exerciseInput; // Solution. Input by user
     let exerciseResult; // Result of exercise
-
     do {
-        // Select random values for exercise variables a and b
+        // Select random values for exercise operands
         firstOperand = Math.floor(Math.random() * 21);
         secondOperand = Math.floor(Math.random() * 21);
         // Select operator randomly  
