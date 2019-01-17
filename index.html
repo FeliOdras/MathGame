@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mathe-Spiel</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/mathGame.js"></script>
 </head>
-<body>
-        <button value="ReloadPage" onClick="window.location.reload()" class="refresh">Bitte zeige mir eine neue Aufgabe</button>
 
-  <!--  
-    <form>
-        <script>
-            window.document.write(lessonOutput);
-        </script>
-        <input type="number" value="20" name="lessonInputValue" id="lessonInputValue" required>
-        <input type="submit" OnClick="compareResult()" name="sendResult">
+<body onload="createExercise()">
+    <div id="lessonOutput"></div>
+    <form onsubmit="return false;">
+        <input type="number" value="" name="lessonInputValue" id="lessonInputValue" required>
+        <input type="submit" onclick="checkResult()" name="sendResult">
     </form>
--->
+    <div id="resultOutput"></div>
+    <button value="ReloadPage" onclick="createExercise()" class="refresh">Bitte zeige mir eine neue Aufgabe</button>
+    <script src="assets/js/mathGame.js"></script>
 </body>
+
 </html>

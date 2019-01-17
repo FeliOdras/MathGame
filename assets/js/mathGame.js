@@ -5,53 +5,56 @@
 // - create feedback wether the input result is correct or not
 
 "use strict";
-
+var exerciseResult; // Result of exercise
 function createExercise() {
-    // Declare variables
-    let firstOperand; // First number of exercise
-    let secondOperand; // Second number of exercise
-    let exerciseOperator; // Mathematical operator + or -
-    let exerciseOutput; // Exercise to solve
-    let exerciseInput; // Solution. Input by user
-    let exerciseResult; // Result of exercise
-    do {
-        // Select random values for exercise operands
-        firstOperand = Math.floor(Math.random() * 21);
-        secondOperand = Math.floor(Math.random() * 21);
-        // Select operator randomly  
-        exerciseOperator = Math.floor(Math.random() * 2);
+  // Declare variables
+  let firstOperand;
+  let secondOperand;
+  let exerciseOperator; // Mathematical operator + or -
+  let exerciseOutput; // Exercise to solve
 
-        // Define mathematical operators for exercise
-        if (exerciseOperator == 0) {
-            exerciseOperator = '-';
-        } else if (exerciseOperator == 1) {
-            exerciseOperator = '+';
-        }
+  do {
+    // Select random values for exercise operands
+    firstOperand = Math.floor(Math.random() * 21);
+    secondOperand = Math.floor(Math.random() * 21);
+    // Select operator randomly
+    exerciseOperator = Math.floor(Math.random() * 2);
 
-        // Calculate Result of exercise
-        if (exerciseOperator == '-') {
-            exerciseResult = firstOperand - secondOperand;
-        } else if (exerciseOperator == '+') {
-            exerciseResult = firstOperand + secondOperand;
-        }
+    // Define mathematical operators for exercise
+    if (exerciseOperator == 0) {
+      exerciseOperator = "-";
+    } else if (exerciseOperator == 1) {
+      exerciseOperator = "+";
     }
+
+    // Calculate Result of exercise
+    if (exerciseOperator == "-") {
+      exerciseResult = firstOperand - secondOperand;
+    } else if (exerciseOperator == "+") {
+      exerciseResult = firstOperand + secondOperand;
+    }
+  } while (
     // Repeat until sum or difference of variables is not greater than 20 and not less than 0
-    while (exerciseResult > 20 || exerciseResult < 0);
-
-
-    exerciseOutput = firstOperand + ' ' + exerciseOperator + ' ' + secondOperand;
-    // console.log(exerciseOutput)
-    // console.log(exerciseResult)
-
-    // Create lesson output (Prompt for now)
-    exerciseInput = prompt("Löse diese Aufgabe: " + exerciseOutput);
-
-    // Compare if the input result is correct or not and put out corresponding feedback
-    if (exerciseInput == exerciseResult) {
-        alert("Super! Du hast die Aufgabe richtig gelöst :)");
-    } else {
-        alert("Das war leider falsch :(");
-    }
+    exerciseResult > 20 ||
+    exerciseResult < 0
+  );
+  exerciseOutput = `Löse diese Aufgabe: <br> ${firstOperand} ${exerciseOperator} ${secondOperand}`;
+  document.getElementById("lessonOutput").innerHTML = exerciseOutput;
+  console.log(exerciseOutput);
 }
 
-createExercise();
+function checkResult() {
+  let exerciseResultOutput;
+  let exerciseInput = document.getElementById("lessonInputValue").value; // Solution. Input by user
+  console.log(exerciseInput);
+  console.log(exerciseResult);
+
+  // Compare if the input result is correct or not and put out corresponding feedback
+  if (exerciseInput == exerciseResult) {
+    exerciseResultOutput = "Super! Du hast die Aufgabe richtig gelöst :)";
+  } else {
+    exerciseResultOutput = "Das war leider falsch. Versuche es noch einmal.";
+  }
+  console.log(exerciseResultOutput);
+  document.getElementById("resultOutput").innerHTML = exerciseResultOutput;
+}
