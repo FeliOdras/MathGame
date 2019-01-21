@@ -17,4 +17,10 @@ header {
     color: #f7e8f7; }
 
 body {
-  background-color: #E3B0E1; }
+  background-color: #ffe5fc; }
+
+main {
+  text-align: center; }
+  main h2 {
+    color: #600055;
+    margin: 15px 0; }
