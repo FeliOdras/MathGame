@@ -78,3 +78,15 @@ main {
     main button:hover {
       background-color: #edd0eb;
       color: #540035; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: .7rem;
+  text-align: center;
+  background-color: #751B71; }
+  footer a {
+    text-decoration: none;
+    color: #f7e8f7;
+    font-family: "Coiny", cursive; }
