@@ -24,3 +24,20 @@ main {
   main h2 {
     color: #600055;
     margin: 15px 0; }
+  main form input {
+    font-family: 'Kaushan Script', cursive;
+    text-align: center; }
+    main form input[type='number'] {
+      color: #600055;
+      font-size: 1.5rem;
+      display: block;
+      margin: 20px auto;
+      background-color: rgba(255, 255, 255, 0.4);
+      border: none; }
+    main form input[type='submit'] {
+      color: #ffe5fc;
+      background-color: #600055;
+      border: 1px solid #600055;
+      padding: 5px 15px;
+      margin: 10px;
+      border-radius: 5px; }
