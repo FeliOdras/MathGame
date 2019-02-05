@@ -27,13 +27,61 @@ main {
             &[type='submit'] {
                 color: #ffe5fc;
                 background-color: #600055;
-                border: 1px solid #600055;
+                border: none;
                 padding: 5px 15px;
                 margin: 10px;
                 border-radius: 5px;
+                font-family: 'Coiny', cursive;
+                font-size: 1rem;
+                transition: all .5s;
+
+                &:hover {
+                    color: #fff;
+                    background-color: #540035;
+                }
+            }
+        }
+    }
+
+    #resultOutput {
+        margin: 25px auto;
+
+        span {
+            margin: 15px auto;
+            font-size: 1.1rem;
+            color: #eee;
+            padding: 15px;
+            border-width: 2px;
+            border-style: dotted;
+
+            &.wrong {
+                color: #b50000;
+                border-color: #b50000
+            }
+
+            &.correct {
+                color: #04752a;
+                border-color: #04752a;
             }
         }
 
+    }
 
+    button {
+        background-color: #fff;
+        color: #600055;
+        border: none;
+        padding: 5px 15px;
+        margin: 10px;
+        border-radius: 5px;
+        font-family: 'Coiny', cursive;
+        font-size: 1rem;
+        transition: all .5s;
+        border: 2px solid #fee1fc;
+
+        &:hover {
+            background-color: #edd0eb;
+            color: #540035;
+        }
     }
 }

@@ -1,5 +1,6 @@
 "use strict";
 var exerciseResult;
+
 function createExercise() {
   let firstOperand;
   let secondOperand;
@@ -32,9 +33,9 @@ function checkResult() {
   let exerciseInput = document.getElementById("lessonInputValue").value;
 
   if (exerciseInput == exerciseResult) {
-    exerciseResultOutput = "Super! Du hast die Aufgabe richtig gelöst :)";
+    exerciseResultOutput = '<span class="correct">Super! Du hast die Aufgabe richtig gelöst :)</span>';
   } else {
-    exerciseResultOutput = "Das war leider falsch. Versuche es noch einmal.";
+    exerciseResultOutput = '<span class="wrong">Das war leider falsch. Versuche es noch einmal.</span>';
   }
   document.getElementById("resultOutput").innerHTML = exerciseResultOutput;
 }
