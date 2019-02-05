@@ -17,7 +17,9 @@ header {
     color: #f7e8f7; }
 
 body {
-  background-color: #ffe5fc; }
+  background-color: #ffe5fc;
+  background-image: url(../images/numbers.png);
+  background-size: cover; }
 
 main {
   text-align: center; }
