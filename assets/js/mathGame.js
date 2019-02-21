@@ -2,12 +2,14 @@
 var exerciseResult;
 
 function createExercise() {
+  debugger;
   let firstOperand;
   let secondOperand;
   let exerciseOperator;
   let exerciseOutput;
   const form = document.querySelector("#exerciseForm");
   form.reset();
+  document.querySelector("#resultOutput").innerHTML = "";
 
   do {
     firstOperand = Math.floor(Math.random() * 21);
@@ -35,9 +37,11 @@ function checkResult() {
   let exerciseInput = document.getElementById("lessonInputValue").value;
 
   if (exerciseInput == exerciseResult) {
-    exerciseResultOutput = '<span class="correct">Super! Du hast die Aufgabe richtig gelöst :)</span>';
+    exerciseResultOutput =
+      '<span class="correct">Super! Du hast die Aufgabe richtig gelöst :)</span>';
   } else {
-    exerciseResultOutput = '<span class="wrong">Das war leider falsch. Versuche es noch einmal.</span>';
+    exerciseResultOutput =
+      '<span class="wrong">Das war leider falsch. Versuche es noch einmal.</span>';
   }
-  document.getElementById("resultOutput").innerHTML = exerciseResultOutput;
+  document.querySelector("#resultOutput").innerHTML = exerciseResultOutput;
 }
