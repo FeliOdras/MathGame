@@ -2,7 +2,6 @@
 var exerciseResult;
 
 function createExercise() {
-  debugger;
   let firstOperand;
   let secondOperand;
   let exerciseOperator;
