@@ -6,6 +6,8 @@ function createExercise() {
   let secondOperand;
   let exerciseOperator;
   let exerciseOutput;
+  const form = document.querySelector("#exerciseForm");
+  form.reset();
 
   do {
     firstOperand = Math.floor(Math.random() * 21);
