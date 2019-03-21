@@ -11,8 +11,8 @@ function createExercise() {
   document.querySelector("#resultOutput").innerHTML = "";
 
   do {
-    firstOperand = Math.floor(Math.random() * 21);
-    secondOperand = Math.floor(Math.random() * 21);
+    firstOperand = Math.floor(Math.random() * 101);
+    secondOperand = Math.floor(Math.random() * 101);
     exerciseOperator = Math.floor(Math.random() * 2);
 
     if (exerciseOperator == 0) {
@@ -26,7 +26,7 @@ function createExercise() {
     } else if (exerciseOperator == "+") {
       exerciseResult = firstOperand + secondOperand;
     }
-  } while (exerciseResult > 20 || exerciseResult < 0);
+  } while (exerciseResult > 100 || exerciseResult < 0);
   exerciseOutput = `Löse diese Aufgabe: <br> ${firstOperand} ${exerciseOperator} ${secondOperand}`;
   document.getElementById("lessonOutput").innerHTML = exerciseOutput;
 }
